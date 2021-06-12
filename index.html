@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<style>
+		body{font-family: fantasy;
+			text-align: center;
+			letter-spacing: .25em;
+			background : linear-gradient(to right,red,blue);
+		}
+
+	</style>
+	<title>
+		Background changer
+	</title>
+</head>
+<body id="gradient">
+<h1>Background changer</h1>
+<input type="color" class="color1" name="color1" value="#eb4034">
+<input type="color" class="color2" name="color2" value="#353acc">
+<script>
+		var color1=document.querySelector(".color1");
+		var color2=document.querySelector(".color2");
+		var body=document.getElementById("gradient");
+		function colour(){
+            let d=confirm("Are you sure you want to change the color?")
+            if (d){
+            	alert("Ok!")
+               body.style.background="linear-gradient(to right,"+color1.value+","+color2.value+")";	
+            }
+            else{
+            	alert("Ok!You can always change it later");
+            }
+
+		}
+		 color1.addEventListener("input",colour);
+		 color2.addEventListener("input",colour);
+	</script>
+</body>
+</html>
